@@ -11,7 +11,7 @@ export default function Item({ src, title, price }:Props) {
         <div>
             <Image src={"/img/" + src + ".jpg"} alt="" width={500} height={500}></Image>
             <p>{title}</p>
-            <p>{"¥" + price + " +tax"}</p>
+            <p>{"¥" + price.toLocaleString() + " +tax"}</p>
         </div>
     );
 }
