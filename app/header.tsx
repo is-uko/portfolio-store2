@@ -42,7 +42,7 @@ export default function Header() {
             </Link>
           </li>
           <li>
-            <Link className="text-white" href="/contact">
+            <Link className="text-white" href="mailto:contact@example.com">
               CONTACT
             </Link>
           </li>
