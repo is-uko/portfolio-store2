@@ -12,11 +12,12 @@ export default function Header() {
 
   return (
     <div className="relative">
-      <span className={
-        isOpen
-          ? "fixed h-screen w-screen bg-black bg-opacity-80"
-          : ""
-      }></span>
+      <span
+        className={
+          isOpen ? "fixed h-screen w-screen bg-black bg-opacity-80" : "hidden"
+        }
+        onClick={handleClick}
+      ></span>
       <nav
         className={
           isOpen
@@ -26,27 +27,37 @@ export default function Header() {
       >
         <ul className="pl-10 pt-5">
           <li className="pb-3">
-            <Link className="text-white" href="#">PRODUCTS</Link>
+            <Link className="text-white" href="/products/1">
+              PRODUCTS
+            </Link>
           </li>
           <li className="pb-3">
-            <Link className="text-white" href="#">ABOUT</Link>
+            <Link className="text-white" href="/about">
+              ABOUT
+            </Link>
           </li>
           <li className="pb-3">
-            <Link className="text-white" href="#">COMPANY</Link>
+            <Link className="text-white" href="/company">
+              COMPANY
+            </Link>
           </li>
           <li>
-            <Link className="text-white" href="#">CONTACT</Link>
+            <Link className="text-white" href="/contact">
+              CONTACT
+            </Link>
           </li>
         </ul>
       </nav>
       <div className="flex justify-between max-w-[1360px] mx-auto px-[40px] py-10">
-        <Image
-          className="h-10 w-auto -z-10"
-          src="/img/logo.svg"
-          alt=""
-          width={500}
-          height={500}
-        ></Image>
+        <Link href="/">
+          <Image
+            className="h-5 w-auto -z-10"
+            src="/img/logo.svg"
+            alt=""
+            width={500}
+            height={500}
+          ></Image>
+        </Link>
         <button className="text-5xl z-10" onClick={handleClick}>
           <span
             className={
